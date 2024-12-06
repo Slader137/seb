@@ -14,13 +14,13 @@
   <?php include ("conexion.php");
   
   include("insertar.php");
-  include("consulta.php");
+
 
 ?>
 <h1>Este es mi Formulario de registro</h1>
 
 <p>Ingresa tus datos</p>
-
+<div class="contenedor">
 <form action="validacion.php" method="POST">
   <label for="nombre">Nombre:</label><br>
   <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br>
@@ -38,12 +38,16 @@
   <br><br>
   <button class="botones" type= "submit"  name="registrar" >registrarse</button>
 </form>
-
+</div>
 
 <form action="consulta.php" method="POST">
     <input type="submit" value="consult" name="consult"> Consultar </input>
   </form>
 </div>
+
+<?php 
+include("cerrar_conexion.php");
+include ("pie.php");
+ ?>
 </body>
 </html>
-<?php ("cerrar_conexion");?>

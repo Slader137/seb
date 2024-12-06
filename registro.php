@@ -17,27 +17,26 @@
   include("consulta.php");
 
 ?>
-<div class="contenedor">
 <h1>Este es mi Formulario de registro</h1>
 
 <p>Ingresa tus datos</p>
 
 <form action="validacion.php" method="POST">
   <label for="nombre">Nombre:</label><br>
-  <input type="text" id="nombre" name="nombre" background="Escribe tu nombre"><br>
+  <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br>
   
   <label for="apellido">apellido:</label><br>
-  <input type="text" id="apellido" name="apellido" background="Escribe tu apellido"><br>
+  <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido"><br>
   
   <label for="contraseña">Contraseña:</label><br>
-  <input type="password" id="contraseña" name="contraseña" background="Escribe tu contraseña"><br>
+  <input type="password" id="contraseña" name="contraseña" placeholder="Escribe tu contraseña"><br>
 
   <label for="correo">Correo:</label><br>
-  <input type="email" id="correo" name="correo" background="correo electronico"><br>
+  <input type="email" id="correo" name="correo" placeholder="correo electronico"><br>
   
   
   <br><br>
-  <button class="botones" type=submit  name="registrar" >registrarse</button>
+  <button class="botones" type= "submit"  name="registrar" >registrarse</button>
 </form>
 
 

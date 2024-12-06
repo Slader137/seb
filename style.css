@@ -3,38 +3,92 @@
 }
 
 body{
-    /*background: url("imagenes/imagen.png") no-repeat center center fixed;*/
-    background-size: cover; /* Asegura que el GIF cubra toda la pantalla */
+   
+    background-size: cover; 
     margin: 0;
     padding: 0;
         font-family: "Prompt", sans-serif;
         font-weight: 100;
         font-style: normal;
-        background-color:  rgb(39, 39, 39);
+        background-color:  rgb(61, 60, 60);
         align-items: center;
         justify-content: space-between;
-        color: rgb(159, 197, 233);
+        color: rgb(255, 255, 255);
         display: grid;
         grid-template-columns: 1fr;
         text-align: center;
         
       
 }
-.contenedor{
-    
-    display: grid;
+nav{
+    background-color:rgb(146, 146, 146);
+    border-radius: 60px;
+    padding:10px;
+    width: 100%;
+    margin-bottom: 20px;
 
-    grid-template-columns: 1fr;
+}
+nav ul{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    padding: 5;
+    margin:10px;
+    list-style:none;
+}
+nav li{
+    display:inline;
+    margin:0;
+}
+nav a {
     
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: #ddd;
+    color:#333;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom:20px;
+    background-color: #333;
+    color: #e26d5c;
+
+    text-align: center;
+    border-radius: 20px;
+}
+.contenedornavegacion{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contenedor{
+
+    width: 80%;
+    
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 50px;
     gap:20px;
 
-    background-color:rgb(33, 67, 70);
+    background-color:rgba(255, 194, 114, 0.856);
     text-align: center;
     border-radius: 30px;
     box-shadow:5px 5px 5px 5px rgb(36, 36, 36);
 }
-.contentedorcentrado{
+#contentedorcentrado{
  
     margin-top:20px;
     margin-bottom:20px;
@@ -45,15 +99,42 @@ body{
 
     background-color: blue;
     font-family: "Prompt", sans-serif;
-    color:rgb(46, 45, 44);
+    color:rgb(180, 101, 22);
     
 }
+#comentarios{
+    margin:10px 0;
+    padding: 10px;
+    color: #e26d5c;
 
+}
 
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: rgb(17, 240, 248);
+    color: rgb(46, 46, 46);
+    border: 1px solid rgb(58, 58, 55);
+    border-radius: 29px;
+    font-family: "Prompt", sans-serif;
+    cursor: pointer;
+}
 
+button[type="submit"]:hover {
+    background-color: rgb(211, 211, 211);
+}
+a{
+    color: rgb(211, 211, 211);
+}
+a:hover{
+color:#5cbfdd;
+
+}
 /* Campos de entrada */
 #correo,
-#contraseña {
+#contraseña,
+#nombre,
+#apellido {
 
     margin: 10px 0;
     padding: 10px;
@@ -68,7 +149,9 @@ body{
 
 /* Hover en los campos de entrada */
 #correo:hover,
-#contraseña:hover {
+#contraseña:hover,
+#nombre:hover,
+#apellido:hover {
     background-color: rgb(146, 146, 146);
     color: #333;
 }
@@ -88,21 +171,135 @@ body{
 #ingresar:hover {
     background-color: #5cbfdd;
 }
-
-/* Información adicional */
-.informacionadicional {
-    border-radius: 30px;
-    box-sizing: border-box;
-    background-color: rgb(122, 122, 122);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    width: 90%;
+.categoria {
+    background-color: rgb(50, 50, 50);
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left:5%;
-    margin-right:5%;
-    box-shadow: 5px 5px 5px 5px rgb(59, 59, 59);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.categoria form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.categoria select {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    border: none;
+    width: 50%;
+    text-align: center;
+}
+
+.categoria input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #81def5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.categoria input[type="submit"]:hover {
+    background-color: #5cbfdd;
+}
+
+/* Contenedor de productos */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilo de cada producto */
+.comidas {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.menu a:hover {
+    background-color: #5cbfdd;
+    color: white;
+}
+
+.comidas h1, 
+.comidas h2, 
+.comidas h3, 
+.comidas h4 {
+    margin: 10px 0;
+    color: white;
+}
+
+.comidas h2 {
+    color: #81def5;
+}
+
+.comidas a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #81def5;
+    color: black;
+   
+    border-radius: 5px;
+    
+ 
+}
+
+
+
+/* Comentarios */
+.contenedor {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+textarea#cajadecomentarios {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Prompt", sans-serif;
+    
+    border: 1px solid #ccc;
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+
+.boton-de-comentarios {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #81def5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+   
+    cursor: pointer;
+}
+
+.boton-de-comentarios:hover {
+    background-color: #5cbfdd;
 }

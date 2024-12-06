@@ -10,13 +10,14 @@
 
 </head> 
 <body>
-  <div class="contenedor">
+  
   <?php include ("conexion.php");
-  include ("validacion.php");
+  
   include("insertar.php");
   include("consulta.php");
 
 ?>
+<div class="contenedor">
 <h1>Este es mi Formulario de registro</h1>
 
 <p>Ingresa tus datos</p>
@@ -46,3 +47,4 @@
 </div>
 </body>
 </html>
+<?php ("cerrar_conexion");?>
